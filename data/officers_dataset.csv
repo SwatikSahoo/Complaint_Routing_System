@@ -1,0 +1,65 @@
+officer_id,officer_name,department,specialization_category,city,primary_ward,languages_supported,experience_years,avg_resolution_days,active_cases_capacity,performance_score,contact_email
+O001,BHU_WAT_01,Water Supply,water,Bhubaneswar,Ward-08,"en,hi,or",12,1,34,3.44,bhu_wat_01@civic.example.org
+O002,BHU_WAT_02,Water Supply,water,Bhubaneswar,Ward-19,"en,hi,or",3,5.3,57,3.92,bhu_wat_02@civic.example.org
+O003,BHU_ELE_01,Electrical,electricity,Bhubaneswar,Ward-05,"en,hi",2,1.9,58,3.25,bhu_ele_01@civic.example.org
+O004,BHU_ELE_02,Electrical,electricity,Bhubaneswar,Ward-19,"en,or",5,5.3,34,3.96,bhu_ele_02@civic.example.org
+O005,BHU_SAN_01,Sanitation,sanitation,Bhubaneswar,Ward-01,"en,hi,or",6,5.8,47,3.78,bhu_san_01@civic.example.org
+O006,BHU_SAN_02,Sanitation,sanitation,Bhubaneswar,Ward-08,"en,hi,or",4,2.4,25,3.85,bhu_san_02@civic.example.org
+O007,BHU_ROA_01,Roads & Works,roads,Bhubaneswar,Ward-19,"en,or",7,5.9,22,4.44,bhu_roa_01@civic.example.org
+O008,BHU_ROA_02,Roads & Works,roads,Bhubaneswar,Ward-12,"en,hi,or",10,1.2,55,3.7,bhu_roa_02@civic.example.org
+O009,BHU_DRA_01,Drainage,drainage,Bhubaneswar,Ward-08,"en,hi",12,4.0,32,4.4,bhu_dra_01@civic.example.org
+O010,BHU_DRA_02,Drainage,drainage,Bhubaneswar,Ward-08,"en,hi,or",2,5.3,34,4.67,bhu_dra_02@civic.example.org
+O011,BHU_PUB_01,Public Safety,public_safety,Bhubaneswar,Ward-08,"en,hi,or",8,2.4,43,3.8,bhu_pub_01@civic.example.org
+O012,BHU_PUB_02,Public Safety,public_safety,Bhubaneswar,Ward-01,"en,hi",12,1.9,60,3.49,bhu_pub_02@civic.example.org
+O013,BHU_HEA_01,Public Health,health,Bhubaneswar,Ward-12,"en,or",5,2.0,60,4.37,bhu_hea_01@civic.example.org
+O014,BHU_HEA_02,Public Health,health,Bhubaneswar,Ward-01,"en,hi,or",5,5.1,22,4.57,bhu_hea_02@civic.example.org
+O015,BHU_TRA_01,Traffic & Transport,transport,Bhubaneswar,Ward-05,"en,hi",8,2.3,40,3.56,bhu_tra_01@civic.example.org
+O016,BHU_TRA_02,Traffic & Transport,transport,Bhubaneswar,Ward-12,"en,hi,or",9,3.0,36,3.44,bhu_tra_02@civic.example.org
+O017,CUT_WAT_01,Water Supply,water,Cuttack,Ward-27,"en,or",10,3.7,57,3.88,cut_wat_01@civic.example.org
+O018,CUT_WAT_02,Water Supply,water,Cuttack,Ward-09,"en,hi",5,7.0,51,3.35,cut_wat_02@civic.example.org
+O019,CUT_ELE_01,Electrical,electricity,Cuttack,Ward-09,"en,hi",2,6.5,30,4.55,cut_ele_01@civic.example.org
+O020,CUT_ELE_02,Electrical,electricity,Cuttack,Ward-21,"en,or",8,4.3,58,4.89,cut_ele_02@civic.example.org
+O021,CUT_SAN_01,Sanitation,sanitation,Cuttack,Ward-27,"en,hi,or",10,2.0,27,4.36,cut_san_01@civic.example.org
+O022,CUT_SAN_02,Sanitation,sanitation,Cuttack,Ward-14,"en,hi,or",10,5.0,38,3.94,cut_san_02@civic.example.org
+O023,CUT_ROA_01,Roads & Works,roads,Cuttack,Ward-14,"en,hi",9,1,31,4.06,cut_roa_01@civic.example.org
+O024,CUT_ROA_02,Roads & Works,roads,Cuttack,Ward-14,"en,hi",3,6.4,52,4.24,cut_roa_02@civic.example.org
+O025,CUT_DRA_01,Drainage,drainage,Cuttack,Ward-09,"en,hi",4,3.3,53,4.76,cut_dra_01@civic.example.org
+O026,CUT_DRA_02,Drainage,drainage,Cuttack,Ward-03,"en,hi,or",11,2.3,43,4.69,cut_dra_02@civic.example.org
+O027,CUT_PUB_01,Public Safety,public_safety,Cuttack,Ward-09,"en,hi",6,2.3,25,3.35,cut_pub_01@civic.example.org
+O028,CUT_PUB_02,Public Safety,public_safety,Cuttack,Ward-27,"en,hi,or",9,5.5,28,4.32,cut_pub_02@civic.example.org
+O029,CUT_HEA_01,Public Health,health,Cuttack,Ward-27,"en,hi",10,1.5,47,4.84,cut_hea_01@civic.example.org
+O030,CUT_HEA_02,Public Health,health,Cuttack,Ward-09,"en,hi",10,5.0,39,3.88,cut_hea_02@civic.example.org
+O031,CUT_TRA_01,Traffic & Transport,transport,Cuttack,Ward-21,"en,hi",12,4.2,48,3.41,cut_tra_01@civic.example.org
+O032,CUT_TRA_02,Traffic & Transport,transport,Cuttack,Ward-03,"en,hi",5,1.4,55,3.59,cut_tra_02@civic.example.org
+O033,PUR_WAT_01,Water Supply,water,Puri,Ward-02,"en,or",5,1,24,4.74,pur_wat_01@civic.example.org
+O034,PUR_WAT_02,Water Supply,water,Puri,Ward-06,"en,hi,or",7,1.2,51,3.56,pur_wat_02@civic.example.org
+O035,PUR_ELE_01,Electrical,electricity,Puri,Ward-18,"en,hi,or",4,5.4,35,4.53,pur_ele_01@civic.example.org
+O036,PUR_ELE_02,Electrical,electricity,Puri,Ward-02,"en,hi,or",8,1.8,42,3.92,pur_ele_02@civic.example.org
+O037,PUR_SAN_01,Sanitation,sanitation,Puri,Ward-02,"en,or",9,5.8,23,3.88,pur_san_01@civic.example.org
+O038,PUR_SAN_02,Sanitation,sanitation,Puri,Ward-02,"en,or",7,5.6,32,3.52,pur_san_02@civic.example.org
+O039,PUR_ROA_01,Roads & Works,roads,Puri,Ward-06,"en,hi,or",9,1.4,49,3.62,pur_roa_01@civic.example.org
+O040,PUR_ROA_02,Roads & Works,roads,Puri,Ward-18,"en,or",3,3.9,23,4.31,pur_roa_02@civic.example.org
+O041,PUR_DRA_01,Drainage,drainage,Puri,Ward-02,"en,or",10,5.5,30,3.89,pur_dra_01@civic.example.org
+O042,PUR_DRA_02,Drainage,drainage,Puri,Ward-15,"en,or",9,1.9,30,3.84,pur_dra_02@civic.example.org
+O043,PUR_PUB_01,Public Safety,public_safety,Puri,Ward-15,"en,hi,or",8,2.3,47,4.38,pur_pub_01@civic.example.org
+O044,PUR_PUB_02,Public Safety,public_safety,Puri,Ward-15,"en,or",10,4.5,32,3.7,pur_pub_02@civic.example.org
+O045,PUR_HEA_01,Public Health,health,Puri,Ward-18,"en,or",2,4.8,40,3.3,pur_hea_01@civic.example.org
+O046,PUR_HEA_02,Public Health,health,Puri,Ward-18,"en,or",11,3.3,23,4.83,pur_hea_02@civic.example.org
+O047,PUR_TRA_01,Traffic & Transport,transport,Puri,Ward-02,"en,or",3,6.3,35,3.89,pur_tra_01@civic.example.org
+O048,PUR_TRA_02,Traffic & Transport,transport,Puri,Ward-18,"en,or",11,1.9,59,3.34,pur_tra_02@civic.example.org
+O049,SAM_WAT_01,Water Supply,water,Sambalpur,Ward-20,"en,hi,or",12,3.8,36,3.55,sam_wat_01@civic.example.org
+O050,SAM_WAT_02,Water Supply,water,Sambalpur,Ward-16,"en,hi",7,2.2,39,3.98,sam_wat_02@civic.example.org
+O051,SAM_ELE_01,Electrical,electricity,Sambalpur,Ward-20,"en,hi",3,1.3,24,4.11,sam_ele_01@civic.example.org
+O052,SAM_ELE_02,Electrical,electricity,Sambalpur,Ward-11,"en,hi",10,2.1,35,3.83,sam_ele_02@civic.example.org
+O053,SAM_SAN_01,Sanitation,sanitation,Sambalpur,Ward-20,"en,hi,or",4,3.7,59,4.87,sam_san_01@civic.example.org
+O054,SAM_SAN_02,Sanitation,sanitation,Sambalpur,Ward-20,"en,hi,or",12,3.5,26,4.8,sam_san_02@civic.example.org
+O055,SAM_ROA_01,Roads & Works,roads,Sambalpur,Ward-04,"en,hi",4,2.7,37,3.68,sam_roa_01@civic.example.org
+O056,SAM_ROA_02,Roads & Works,roads,Sambalpur,Ward-07,"en,hi,or",5,5.3,52,4.03,sam_roa_02@civic.example.org
+O057,SAM_DRA_01,Drainage,drainage,Sambalpur,Ward-16,"en,hi,or",2,1.9,22,3.21,sam_dra_01@civic.example.org
+O058,SAM_DRA_02,Drainage,drainage,Sambalpur,Ward-11,"en,hi",4,4.9,48,4.14,sam_dra_02@civic.example.org
+O059,SAM_PUB_01,Public Safety,public_safety,Sambalpur,Ward-04,"en,hi",8,4.1,29,4.13,sam_pub_01@civic.example.org
+O060,SAM_PUB_02,Public Safety,public_safety,Sambalpur,Ward-07,"en,hi,or",7,4.3,28,3.27,sam_pub_02@civic.example.org
+O061,SAM_HEA_01,Public Health,health,Sambalpur,Ward-04,"en,hi,or",7,6.2,33,4.36,sam_hea_01@civic.example.org
+O062,SAM_HEA_02,Public Health,health,Sambalpur,Ward-20,"en,hi,or",12,1,59,4.47,sam_hea_02@civic.example.org
+O063,SAM_TRA_01,Traffic & Transport,transport,Sambalpur,Ward-07,"en,hi,or",5,6.2,21,3.5,sam_tra_01@civic.example.org
+O064,SAM_TRA_02,Traffic & Transport,transport,Sambalpur,Ward-16,"en,hi",7,5.5,37,3.47,sam_tra_02@civic.example.org

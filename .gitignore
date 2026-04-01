@@ -1,0 +1,32 @@
+# virtual environment
+venv/
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# notebook checkpoints
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# test / temp / logs
+*.log
+tmp/
+temp/
+
+# build artifacts
+build/
+dist/
+*.egg-info/
+
+# env files / secrets
+.env
+.env.*

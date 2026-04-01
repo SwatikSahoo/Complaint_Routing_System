@@ -1,0 +1,7 @@
+{
+  "priority_accuracy": 0.3,
+  "priority_f1_weighted": 0.29790704990704997,
+  "eta_mae_days": 1.5776410699381807,
+  "routing_accuracy": 0.32666666666666666,
+  "routing_f1_weighted": 0.31851404151404156
+}
