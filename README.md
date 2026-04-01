@@ -7,7 +7,6 @@ This ML pipeline helps to train a multi-task system for priority classification,
 - Priority prediction: predicts `high`, `medium`, or `low`
 - ETA estimation: predicts resolution time in days
 - Similarity search: retrieves related historical complaints
-- Multilingual handling: trains on `normalized_text_en` while preserving original multilingual inputs in the data
 
 ## Project structure
 
