@@ -121,7 +121,6 @@ python evaluate.py
 
 ### 5) Run inference from CLI
 
-**Windows**
 ```bash
 python cli.py --text "Water pipeline leakage near market road for two days" --category water --subcategory "pipeline leakage" --city Bhubaneswar --ward Ward-08 --language en --attachments-count 2 --citizen-sentiment-score 0.35
 ```
