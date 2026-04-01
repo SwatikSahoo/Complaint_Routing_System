@@ -1,4 +1,4 @@
-# Complaint Auto-Routing System (CLI)
+# Complaint Routing System (CLI)
 
 This ML pipeline helps to train a multi-task system for priority classification, ETA regression, officer routing, and historical similarity search, then it combines learned routing probabilities with business constraints like specialization, city, ward, and language support to produce practical officer recommendations.
 
@@ -125,11 +125,6 @@ python evaluate.py
 **Windows**
 ```bash
 python cli.py --text "Water pipeline leakage near market road for two days" --category water --subcategory "pipeline leakage" --city Bhubaneswar --ward Ward-08 --language en --attachments-count 2 --citizen-sentiment-score 0.35
-```
-
-### Example for audio complaint using transcript text
-```bash
-python cli.py --input-type audio --text "There is a dangerous open manhole near Ward-08 after rain" --category drainage --subcategory "manhole cover broken" --city Bhubaneswar --ward Ward-08 --language en
 ```
 
 ```bash
