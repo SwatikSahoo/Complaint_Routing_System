@@ -1,6 +1,6 @@
 # Complaint Auto-Routing System (CLI)
 
-Offline, end-to-end Python project for the **AI/ML Dev - Assignment: Complaint Auto-Routing System**. It uses only local Python libraries and the provided synthetic datasets.
+This ML pipeline helps to train a multi-task system for priority classification, ETA regression, officer routing, and historical similarity search, then it combines learned routing probabilities with business constraints like specialization, city, ward, and language support to produce practical officer recommendations.
 
 ## What this project does
 - Officer routing: recommends the best officer(s)
@@ -8,7 +8,6 @@ Offline, end-to-end Python project for the **AI/ML Dev - Assignment: Complaint A
 - ETA estimation: predicts resolution time in days
 - Similarity search: retrieves related historical complaints
 - Multilingual handling: trains on `normalized_text_en` while preserving original multilingual inputs in the data
-- Audio/video handling: CLI accepts audio/video as **transcribed text**, which is a practical offline design for the assignment
 
 ## Project structure
 
@@ -62,6 +61,7 @@ It then creates TF-IDF vector features with uni-grams and bi-grams. Numeric feat
 - Model: `LogisticRegression`
 - Target: `assigned_officer_id`
 - Final officer ranking = router probability + business rules
+- Metrics: accuracy and weighted F1
 
 Business rules used for re-ranking:
 - category specialization match
@@ -77,12 +77,12 @@ Business rules used for re-ranking:
 - Index: `NearestNeighbors(metric="cosine")`
 - Output: top-k similar historical complaints with similarity score
 
-## Why audio/video are handled as transcripts
+<!-- ## Why audio/video are handled as transcripts
 The assignment asks for multilingual text plus audio/video, but the downstream ML tasks are routing, priority, ETA, and similarity. In a production-safe offline baseline, audio/video are converted to text first using local speech-to-text. This repo keeps the interface ready for that by accepting:
 - `--input-type audio` or `--input-type video`
 - `--text` or `--transcript-file`
 
-That keeps the ML system unified and avoids maintaining separate models per modality.
+That keeps the ML system unified and avoids maintaining separate models per modality. -->
 
 ## Setup
 
@@ -151,7 +151,7 @@ python cli.py \
   --language en
 ```
 
-### JSON output mode
+<!-- ### JSON output mode
 ```bash
 python cli.py \
   --text "Street light not working for three nights" \
@@ -161,13 +161,5 @@ python cli.py \
   --ward Ward-04 \
   --language en \
   --json
-```
+``` -->
 
-## Suggested interview explanation
-“I built a unified offline ML pipeline where multilingual text, and audio/video transcripts, are normalized into a common text representation. I trained a multi-task system for priority classification, ETA regression, officer routing, and historical similarity search, then combined learned routing probabilities with business constraints like specialization, city, ward, and language support to produce practical officer recommendations.”
-
-## Future improvements
-- Replace TF-IDF with a fully local sentence embedding model when model files are available offline
-- Add Vosk or Whisper local STT integration for direct audio/video processing
-- Add confidence calibration and feedback loop re-training
-- Add FastAPI or Streamlit frontend
