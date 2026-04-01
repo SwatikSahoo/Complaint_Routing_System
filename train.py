@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 import joblib
 from sklearn.model_selection import train_test_split
-
 from src.complaint_router.config import (
     COMPLAINTS_CSV,
     OFFICERS_CSV,
@@ -29,7 +28,6 @@ from src.complaint_router.modeling import (
     evaluate_models,
 )
 
-
 def main() -> None:
     parser = argparse.ArgumentParser(description='Train complaint routing system.')
     parser.add_argument('--complaints', type=Path, default=COMPLAINTS_CSV)
@@ -37,12 +35,9 @@ def main() -> None:
     parser.add_argument('--historical', type=Path, default=HISTORICAL_CSV)
     parser.add_argument('--models-dir', type=Path, default=MODELS_DIR)
     args = parser.parse_args()
-
     args.models_dir.mkdir(parents=True, exist_ok=True)
-
     datasets = load_datasets(args.complaints, args.officers, args.historical)
     complaints = datasets.complaints.copy()
-
     train_df, test_df = train_test_split(
         complaints,
         test_size=0.2,
@@ -60,7 +55,6 @@ def main() -> None:
     X_train_text = transform_text(vectorizer, train_text)
     X_test_text = transform_text(vectorizer, test_text)
     X_hist_text = transform_text(vectorizer, hist_text)
-
     X_train_num = build_numeric_features(train_df)
     X_test_num = build_numeric_features(test_df)
     X_train = combine_features(X_train_text, X_train_num)
@@ -96,7 +90,6 @@ def main() -> None:
         METADATA_PATH,
     )
     EVAL_PATH.write_text(json.dumps(evaluation, indent=2))
-
     print('Training completed successfully.')
     print(json.dumps(evaluation, indent=2))
 
