@@ -151,15 +151,4 @@ python cli.py \
   --language en
 ```
 
-<!-- ### JSON output mode
-```bash
-python cli.py \
-  --text "Street light not working for three nights" \
-  --category electricity \
-  --subcategory "street light outage" \
-  --city Cuttack \
-  --ward Ward-04 \
-  --language en \
-  --json
-``` -->
 
