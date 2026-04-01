@@ -17,7 +17,6 @@ def clean_text(text: str) -> str:
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
-
 def build_training_text(df: pd.DataFrame) -> pd.Series:
     parts = (
         df['normalized_text_en'].fillna('')

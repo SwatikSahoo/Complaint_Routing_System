@@ -24,7 +24,6 @@ class ComplaintInput:
     attachments_count: int = 0
     citizen_sentiment_score: float = 0.0
 
-
 class ComplaintRoutingPipeline:
     def __init__(self, artifacts_dir):
         self.vectorizer = joblib.load(artifacts_dir / 'vectorizer.joblib')
@@ -75,30 +74,24 @@ class ComplaintRoutingPipeline:
     def _rank_officers(self, complaint: ComplaintInput, routing_proba: np.ndarray) -> List[Dict]:
         classes = list(self.router_model['officer_ids'])
         class_to_prob = {cls: float(prob) for cls, prob in zip(classes, routing_proba)}
-
         candidates = self.officers.copy()
         candidates = candidates[candidates['specialization_category'].str.lower() == complaint.category.lower()]
         if candidates.empty:
             candidates = self.officers.copy()
-
         same_city = candidates[candidates['city'].str.lower() == complaint.city.lower()]
         if not same_city.empty:
             candidates = same_city
-
         def language_match(langs: str) -> float:
             supported = {x.strip().lower() for x in str(langs).split(',') if x.strip()}
             return 1.0 if complaint.language.lower() in supported else 0.0
-
         def ward_match(primary_ward: str) -> float:
             return 1.0 if str(primary_ward).strip().lower() == complaint.ward.lower() else 0.0
-
         candidates['router_probability'] = candidates['officer_id'].map(lambda oid: class_to_prob.get(oid, 0.0))
         candidates['language_match'] = candidates['languages_supported'].map(language_match)
         candidates['ward_match'] = candidates['primary_ward'].map(ward_match)
         candidates['performance_norm'] = candidates['performance_score'] / max(candidates['performance_score'].max(), 1.0)
         candidates['capacity_norm'] = 1.0 - (candidates['active_cases_capacity'] / max(candidates['active_cases_capacity'].max(), 1.0))
         candidates['eta_norm'] = 1.0 - (candidates['avg_resolution_days'] / max(candidates['avg_resolution_days'].max(), 1.0))
-
         candidates['final_score'] = (
             0.45 * candidates['router_probability']
             + 0.20 * candidates['performance_norm']
@@ -107,7 +100,6 @@ class ComplaintRoutingPipeline:
             + 0.10 * candidates['eta_norm']
             + 0.05 * candidates['capacity_norm']
         )
-
         cols = [
             'officer_id', 'officer_name', 'department', 'specialization_category',
             'city', 'primary_ward', 'languages_supported', 'avg_resolution_days',
@@ -135,7 +127,6 @@ class ComplaintRoutingPipeline:
     def predict(self, complaint: ComplaintInput) -> Dict:
         frame = self._to_frame(complaint)
         X_row, text_matrix = self._build_feature_row(frame)
-
         priority = self.priority_model.predict(X_row)[0]
         priority_proba = self.priority_model.predict_proba(X_row)[0]
         eta_days = float(self.eta_model.predict(X_row.toarray())[0])
@@ -157,7 +148,7 @@ class ComplaintRoutingPipeline:
     @staticmethod
     def pretty_print(result: Dict) -> str:
         lines = []
-        lines.append('=== Complaint Auto-Routing Result ===')
+        lines.append('=== Results for Complaint Routing System ===')
         lines.append(f"Priority: {result['predictions']['priority']} (confidence={result['predictions']['priority_confidence']:.2f})")
         lines.append(f"Estimated Resolution Time: {result['predictions']['eta_days']} day(s)")
         lines.append('')

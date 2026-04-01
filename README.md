@@ -127,6 +127,11 @@ python evaluate.py
 python cli.py --text "Water pipeline leakage near market road for two days" --category water --subcategory "pipeline leakage" --city Bhubaneswar --ward Ward-08 --language en --attachments-count 2 --citizen-sentiment-score 0.35
 ```
 
+### Example for audio complaint using transcript text
+```bash
+python cli.py --input-type audio --text "There is a dangerous open manhole near Ward-08 after rain" --category drainage --subcategory "manhole cover broken" --city Bhubaneswar --ward Ward-08 --language en
+```
+
 ```bash
 python cli.py \
   --text "Water pipeline leakage near market road for two days" \
@@ -139,16 +144,5 @@ python cli.py \
   --citizen-sentiment-score 0.35
 ```
 
-### Example for audio complaint using transcript text
-```bash
-python cli.py \
-  --input-type audio \
-  --text "There is a dangerous open manhole near Ward-08 after rain" \
-  --category drainage \
-  --subcategory "manhole cover broken" \
-  --city Bhubaneswar \
-  --ward Ward-08 \
-  --language en
-```
 
 
