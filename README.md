@@ -128,6 +128,11 @@ python cli.py --text "Water pipeline leakage near market road for two days" --ca
 ```
 
 ```bash
+python cli.py --text "Health-related complaint about illegal dumping in Ward-08, Bhubaneswar." --category health --subcategory "illegal dumping" --city Bhubaneswar --ward Ward-08 --language en --attachments-count 3 --citizen-sentiment-score 0.8
+```
+
+
+```bash
 python cli.py \
   --text "Water pipeline leakage near market road for two days" \
   --category water \

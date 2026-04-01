@@ -7,9 +7,7 @@ import pandas as pd
 from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-
 WORD_RE = re.compile(r'[^a-z0-9\s-]+', flags=re.IGNORECASE)
-
 
 def clean_text(text: str) -> str:
     text = (text or '').strip().lower()
@@ -29,7 +27,6 @@ def build_training_text(df: pd.DataFrame) -> pd.Series:
     )
     return parts.map(clean_text)
 
-
 def fit_vectorizer(texts: Iterable[str]) -> TfidfVectorizer:
     vectorizer = TfidfVectorizer(
         ngram_range=(1, 2),
@@ -41,11 +38,9 @@ def fit_vectorizer(texts: Iterable[str]) -> TfidfVectorizer:
     vectorizer.fit(texts)
     return vectorizer
 
-
 def transform_text(vectorizer: TfidfVectorizer, texts: Iterable[str]):
     cleaned = [clean_text(t) for t in texts]
     return vectorizer.transform(cleaned)
-
 
 def build_numeric_features(df: pd.DataFrame) -> csr_matrix:
     cols = []
@@ -56,7 +51,6 @@ def build_numeric_features(df: pd.DataFrame) -> csr_matrix:
         return csr_matrix((len(df), 0))
     arr = np.hstack(cols)
     return csr_matrix(arr)
-
 
 def combine_features(text_matrix, numeric_matrix):
     if numeric_matrix.shape[1] == 0:
